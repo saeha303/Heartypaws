@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="281.0" prefWidth="200.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DemoController">
+   <children>
+      <ImageView fx:id="image" fitHeight="120.0" fitWidth="200.0" onMouseClicked="#showCard" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <Label fx:id="name" alignment="CENTER" layoutY="141.0" prefHeight="17.0" prefWidth="200.0" text="name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="stay" alignment="CENTER" layoutX="-1.0" layoutY="178.0" prefHeight="17.0" prefWidth="200.0" text="stay" />
+      <Label fx:id="status" alignment="CENTER" layoutX="-1.0" layoutY="205.0" prefHeight="17.0" prefWidth="200.0" text="status" />
+      <ImageView fx:id="image1" fitHeight="30.0" fitWidth="30.0" layoutX="84.0" layoutY="230.0" onMouseClicked="#showCard" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@Images/download.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

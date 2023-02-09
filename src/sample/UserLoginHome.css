@@ -1,0 +1,9 @@
+.sidebarItem:hover{
+    -fx-border-color:  #6A0DAD;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.sidebarItem:focused{
+    -fx-border-color:  #6A0DAD;
+    -fx-border-width: 0px 0px 0px 3px;
+}

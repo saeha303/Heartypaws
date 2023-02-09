@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="680.0" prefWidth="1280.0" stylesheets="@adminlogin.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminlogincontroller">
+    <children>
+        <BorderPane layoutX="114.0" layoutY="54.0" prefHeight="680.0" prefWidth="683.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="22.0" prefWidth="683.0" style="-fx-background-color: #6ebfe4;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane layoutX="102.0" layoutY="20.0" prefHeight="25.0" prefWidth="683.0" style="-fx-background-color: #b1d235;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <ImageView fx:id="Exit" fitHeight="22.0" fitWidth="22.0" layoutX="1232.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Images/exit.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="Min" fitHeight="18.0" fitWidth="18.0" layoutX="1210.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Images/Remove.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <Label fx:id="MenuClose" layoutX="14.0" layoutY="36.0" prefHeight="22.0" prefWidth="92.0" text="MENU" textFill="WHITE" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="594.0" AnchorPane.topAnchor="36.0">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Images/menu.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="Menu" layoutX="14.0" layoutY="36.0" prefHeight="22.0" prefWidth="92.0" text="MENU" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Images/menu.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="adminName" alignment="CENTER" layoutX="1195.0" layoutY="38.0" prefHeight="17.0" prefWidth="69.0" text="Admin" textFill="WHITE" underline="true">
+                            <font>
+                                <Font name="Constantia Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="pageNameLabel" layoutX="702.0" layoutY="37.0" prefHeight="17.0" prefWidth="206.0" text="Animals" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </top>
+            <left>
+                <AnchorPane fx:id="slider" prefHeight="615.0" prefWidth="253.0" style="-fx-background-color: #b1d235 #b1d235;" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="100.0" fitWidth="176.0" layoutX="70.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../server/Images/A1transparent.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="animalsMenu" alignment="BASELINE_LEFT" layoutY="179.0" onAction="#animalsAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfe4;" styleClass="sidebarItem" text="Animals" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="phyCon" alignment="BASELINE_LEFT" layoutY="215.0" onAction="#phyConAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfbf;" styleClass="sidebarItem" text="Physical Condition" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="vaccine" alignment="BASELINE_LEFT" layoutY="251.0" onAction="#vaccineAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfe4;" styleClass="sidebarItem" text="Vaccination Status" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="staff" alignment="BASELINE_LEFT" layoutY="287.0" onAction="#staffAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfbf;" styleClass="sidebarItem" text="Staffs" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="donor" alignment="BASELINE_LEFT" layoutY="323.0" onAction="#donorAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfe4;" styleClass="sidebarItem" text="Donors" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="reqToDrop" alignment="BASELINE_LEFT" layoutY="467.0" onAction="#reqToDropAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfe4;" styleClass="sidebarItem" text="Request to Drop" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="supplier" alignment="BASELINE_LEFT" layoutY="395.0" onAction="#supplierAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfe4;" styleClass="sidebarItem" text="Suppliers" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="history" alignment="BASELINE_LEFT" layoutY="503.0" onAction="#historyAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfbf;" styleClass="sidebarItem" text="Adopted Animals" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="registered" alignment="BASELINE_LEFT" layoutY="359.0" onAction="#registeredAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfbf;" styleClass="sidebarItem" text="Registered People" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="transaction" alignment="BASELINE_LEFT" layoutY="431.0" onAction="#transactionAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfbf;" styleClass="sidebarItem" text="Transactions" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="logout" alignment="BASELINE_LEFT" layoutY="575.0" onAction="#tologinAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfbf;" styleClass="sidebarItem" text="Log Out" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="name1" layoutX="56.0" layoutY="109.0" text="HEARTY PAWS " textFill="#1b9dd4">
+                            <font>
+                                <Font name="Cooper Black" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="name2" layoutX="172.0" layoutY="102.0" text="🐾" textFill="#1b9dd4">
+                            <font>
+                                <Font name="Cooper Black" size="25.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="oldEmployeeButton" alignment="BASELINE_LEFT" layoutY="539.0" onAction="#oldEmployeeAction" prefHeight="35.0" prefWidth="253.0" style="-fx-background-color: #6ebfe4;" styleClass="sidebarItem" text="Old Employee History" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane fx:id="scrollAnchorPane" prefHeight="528.0" prefWidth="401.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TableView fx:id="requestToDropTable" layoutX="6.0" layoutY="5.0" prefHeight="527.0" prefWidth="1015.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="serial_no9" minWidth="0.0" prefWidth="0.0" text="SERIAL_NO" />
+                                <TableColumn fx:id="name9" prefWidth="77.33332824707031" text="NAME" />
+                                <TableColumn fx:id="application_date9" prefWidth="182.66666173934937" text="APPLICATION_DATE" />
+                                <TableColumn fx:id="contact_no9" prefWidth="111.3333740234375" text="CONTACT_NO" />
+                                <TableColumn fx:id="email9" prefWidth="102.0" text="EMAIL" />
+                                <TableColumn fx:id="address9" prefWidth="131.99996948242188" text="ADDRESS" />
+                                <TableColumn fx:id="rescueDate9" prefWidth="101.33331298828125" text="RESCUE_DATE" />
+                                <TableColumn fx:id="animal_type9" prefWidth="86.0" text="ANIMAL_TYPE" />
+                                <TableColumn fx:id="physical_condition9" prefWidth="140.0" text="PHYSICAL_CONDITION" />
+                                <TableColumn fx:id="approve9" prefWidth="80.66664632161462" text="APPROVE" />
+                            </columns>
+                        </TableView>
+                        <ScrollPane fx:id="scroll" hbarPolicy="NEVER" layoutX="170.0" layoutY="87.0" prefHeight="436.0" prefWidth="693.0">
+                            <content>
+                                <GridPane fx:id="grid" maxHeight="-Infinity" maxWidth="-Infinity">
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                    </rowConstraints>
+                                </GridPane>
+                            </content>
+                        </ScrollPane>
+                        <TableView fx:id="phyConditionTable" layoutX="22.0" layoutY="10.0" prefHeight="527.0" prefWidth="990.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="id2" prefWidth="115.9999942779541" text="NAME" />
+                                <TableColumn fx:id="injury_statusCol" prefWidth="394.4000244140625" text="INJURY STATUS" />
+                                <TableColumn fx:id="diseaseCol" minWidth="0.0" prefWidth="315.2000732421875" text="DISEASE" />
+                                <TableColumn fx:id="therapyCol" prefWidth="163.199951171875" text="THERAPY" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="vaccinationTable" layoutX="13.0" layoutY="12.0" prefHeight="527.0" prefWidth="1000.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="id3" prefWidth="61.59997749328613" text="NAME" />
+                                <TableColumn fx:id="DISTEMPERcol" prefWidth="56.79998016357422" text="DISTEMPER" />
+                                <TableColumn fx:id="HEPATITIScol" prefWidth="56.79998016357422" text="HEPATITIS" />
+                                <TableColumn fx:id="LEPTOSPIROSIScol" prefWidth="56.79998016357422" text="LEPTOSPIROSIS" />
+                                <TableColumn fx:id="PARVOcol" prefWidth="56.79998016357422" text="PARVO" />
+                                <TableColumn fx:id="PARAINFLUENZAcol" prefWidth="56.79998016357422" text="PARAINFLUENZA" />
+                                <TableColumn fx:id="ADENOVIRUS_TYPE_1col" prefWidth="56.79998016357422" text="ADENOVIRUS_TYPE_1" />
+                                <TableColumn fx:id="ADENOVIRUS_TYPE_2col" prefWidth="56.79998016357422" text="ADENOVIRUS_TYPE_2" />
+                                <TableColumn fx:id="BORDETELLAcol" prefWidth="56.79998016357422" text="BORDETELLA" />
+                                <TableColumn fx:id="RABIEScol" prefWidth="56.79998016357422" text="RABIES" />
+                                <TableColumn fx:id="FELINEHERPESVIRUScol" prefWidth="56.79998016357422" text="FELINEHERPESVIRUS" />
+                                <TableColumn fx:id="CALICIVIRUScol" prefWidth="56.79998016357422" text="CALICIVIRUS" />
+                                <TableColumn fx:id="FELINE_LEUKEMIA_VIRUScol" prefWidth="56.79998016357422" text="FELINE_LEUKEMIA_VIRUS" />
+                                <TableColumn fx:id="LAST_VACCINATEDcol" prefWidth="119.2000732421875" text="LAST_VACCINATED" />
+                                <TableColumn fx:id="NEXT_VACCINATION_DATEcol" prefWidth="136.800048828125" text="NEXT_VACCINATION_DATE" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="staffTable" layoutX="8.0" layoutY="6.0" prefHeight="527.0" prefWidth="1008.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="employeIdCol4" minWidth="0.0" prefWidth="0.0" text="EMPLOYEE_ID" />
+                                <TableColumn fx:id="namecol4" prefWidth="140.00000476837158" text="NAME" />
+                                <TableColumn fx:id="CONTACT_NOcol4" prefWidth="206.00001525878906" text="CONTACT_NO" />
+                                <TableColumn fx:id="dob4" prefWidth="113.60002899169922" text="DATE_OF_BIRTH" />
+                                <TableColumn fx:id="gender4" prefWidth="55.200103759765625" text="GENDER" />
+                                <TableColumn fx:id="jobPosition4" prefWidth="90.39996528625488" text="JOB_POSITION" />
+                                <TableColumn fx:id="address4" prefWidth="113.60002899169922" text="ADDRESS" />
+                                <TableColumn fx:id="salary4" prefWidth="90.39996528625488" text="SALARY" />
+                                <TableColumn fx:id="hire_date" prefWidth="90.39996528625488" text="HIRE_DATE" />
+                                <TableColumn fx:id="email4" prefWidth="104.0" text="EMAIL" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="donorTable" layoutX="6.0" layoutY="4.0" prefHeight="527.0" prefWidth="1013.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="donor_id5" minWidth="0.0" prefWidth="0.0" text="DONOR_ID" />
+                                <TableColumn fx:id="name5" prefWidth="247.33334875106812" text="NAME" />
+                                <TableColumn fx:id="contact_no5" prefWidth="158.4000244140625" text="CONTACT_NO" />
+                                <TableColumn fx:id="email5" prefWidth="198.66677856445312" text="EMAIL" />
+                                <TableColumn fx:id="address5" prefWidth="214.66656494140625" text="ADDRESS" />
+                                <TableColumn fx:id="yearsActiveCol" prefWidth="196.66668701171875" text="YEARS_ACTIVE" />
+                                <TableColumn fx:id="assigned_worker5" prefWidth="35.33331298828125" text="ASSIGNED_WORKER" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="registeredPeopleTable" editable="true" layoutX="3.0" layoutY="3.0" prefHeight="527.0" prefWidth="1018.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="userName6" prefWidth="226.3999571800232" text="USER_NAME" />
+                                <TableColumn fx:id="appliedForCol" minWidth="0.0" prefWidth="0.0" text="APPLIED_FOR" />
+                                <TableColumn fx:id="apptoAdopt" prefWidth="296.6666717529297" text="APPLIED_TO_ADOPT" />
+                                <TableColumn fx:id="application_date6" minWidth="0.0" prefWidth="340.0000305175781" text="APPLICATION_DATE" />
+                                <TableColumn fx:id="select" prefWidth="228.666748046875" style="-fx-alignment: CENTER;" text="SELECT" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="suppliersTable" layoutX="4.0" layoutY="4.0" prefHeight="527.0" prefWidth="1017.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="supplierId" minWidth="0.0" prefWidth="0.0" text="SUPPLIER_ID" />
+                                <TableColumn fx:id="name7" prefWidth="254.66670751571655" text="NAME" />
+                                <TableColumn fx:id="contact_no7" prefWidth="177.5999755859375" text="CONTACT_NO" />
+                                <TableColumn fx:id="description7" prefWidth="292.7999572753906" text="DESCRIPTION" />
+                                <TableColumn fx:id="address7" prefWidth="292.80010986328125" text="ADDRESS" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="transactionsTable" layoutX="5.0" layoutY="3.0" prefHeight="527.0" prefWidth="1013.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="transactionIdCol" prefWidth="144.80001211166382" text="TRANS_ID" />
+                                <TableColumn fx:id="transDateCol" prefWidth="187.99993896484375" text="TRANS_DATE" />
+                                <TableColumn fx:id="type8" prefWidth="163.20001220703125" text="TYPE" />
+                                <TableColumn fx:id="person_id8" prefWidth="155.20004272460938" text="PERSON_ID" />
+                                <TableColumn fx:id="id_type8" prefWidth="179.199951171875" text="ID_TYPE" />
+                                <TableColumn fx:id="amount8" prefWidth="187.199951171875" text="AMOUNT" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="adoptedAnimalsTable" layoutX="4.0" layoutY="4.0" prefHeight="527.0" prefWidth="1018.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="id10" minWidth="0.0" prefWidth="0.0" text="ID" />
+                                <TableColumn fx:id="adName" prefWidth="141.33334875106812" text="ANIMAL_NAME" />
+                                <TableColumn fx:id="adoptedByCol" prefWidth="164.66664123535156" text="ADOPTED_BY" />
+                                <TableColumn fx:id="contact_no_10" prefWidth="143.99993896484375" text="CONTACT_NO" />
+                                <TableColumn fx:id="address10" prefWidth="138.66671752929688" text="ADDRESS" />
+                                <TableColumn fx:id="email10" minWidth="0.0" prefWidth="166.6666259765625" text="EMAIL" />
+                                <TableColumn fx:id="adoptionDate10" prefWidth="345.99993896484375" text="ADOPTION_DATE" />
+                            </columns>
+                        </TableView>
+                        <Button fx:id="addRecordButton" layoutX="397.0" layoutY="553.0" mnemonicParsing="false" onAction="#addRecordAction" style="-fx-background-color: #6ebfe4;" text="ADD RECORD" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor></Button>
+                        <Button fx:id="saveChangesButton" layoutX="539.0" layoutY="553.0" mnemonicParsing="false" onAction="#saveChangesAction" style="-fx-background-color: #6ebfe4;" text="SAVE CHANGES" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor></Button>
+                        <Button fx:id="refreshButton" layoutX="306.0" layoutY="553.0" mnemonicParsing="false" onAction="#refresh" style="-fx-background-color: #6ebfe4;" text="REFRESH" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor></Button>
+                        <Button fx:id="addAnimalButton" layoutX="406.0" layoutY="553.0" mnemonicParsing="false" onAction="#showAddAnimalForm" prefHeight="29.0" prefWidth="105.0" style="-fx-background-color: #6ebfe4;" text="Add animal" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor></Button>
+                        <TableView fx:id="OldEmployeeTable" layoutX="8.0" layoutY="3.0" prefHeight="527.0" prefWidth="1008.0" visible="false">
+                            <columns>
+                                <TableColumn fx:id="employeIdCol41" minWidth="0.0" prefWidth="0.0" text="EMPLOYEE_ID" />
+                                <TableColumn fx:id="namecol41" prefWidth="141.33334863185883" text="NAME" />
+                                <TableColumn fx:id="CONTACT_NOcol41" prefWidth="125.33329772949219" text="CONTACT_NO" />
+                                <TableColumn fx:id="dob41" prefWidth="104.79998779296875" text="DATE_OF_BIRTH" />
+                                <TableColumn fx:id="gender41" prefWidth="63.20001220703125" text="GENDER" />
+                                <TableColumn fx:id="jobPosition41" prefWidth="90.40005493164062" text="JOB_POSITION" />
+                                <TableColumn fx:id="address41" prefWidth="87.199951171875" text="ADDRESS" />
+                                <TableColumn fx:id="salary41" prefWidth="73.60003662109375" text="SALARY" />
+                                <TableColumn fx:id="email41" prefWidth="73.60003662109375" text="EMAIL" />
+                                <TableColumn fx:id="hire_date1" prefWidth="96.00006103515625" text="HIRE_DATE" />
+                                <TableColumn fx:id="last_wok" prefWidth="151.199951171875" text="LAST_WORKING_DATE" />
+                            </columns>
+                        </TableView>
+                        <Button fx:id="approveButton" layoutX="539.0" layoutY="553.0" mnemonicParsing="false" onAction="#approveAction" prefHeight="29.0" prefWidth="115.0" style="-fx-background-color: #6ebfe4;" text="APPROVE" textFill="WHITE" visible="false">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="FIREBUTTON" layoutX="693.0" layoutY="553.0" mnemonicParsing="false" onAction="#FireButtonAction" style="-fx-background-color: #6ebfe4;" text="FIRE" textFill="WHITE" visible="false">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <AnchorPane fx:id="addanimalScrollPane" layoutX="204.0" layoutY="-1.0" prefHeight="634.0" prefWidth="599.0" visible="false">
+                            <children>
+                                <ScrollPane prefHeight="634.0" prefWidth="600.0">
+                                    <content>
+                                        <AnchorPane fx:id="pastehere" minHeight="970.0" minWidth="600.0" prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <AnchorPane prefHeight="969.0" prefWidth="600.0" style="-fx-background-color: white;">
+                                                    <children>
+                                                        <Label layoutX="157.0" layoutY="154.0" prefHeight="30.0" prefWidth="286.0" text="GIVE ANIMAL'S INFO" textFill="#b1d235">
+                                                            <font>
+                                                                <Font name="Cooper Black" size="24.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <BorderPane layoutY="47.0" prefHeight="923.0" prefWidth="56.0" style="-fx-background-color: #D3D3D3;" />
+                                                        <BorderPane layoutX="544.0" layoutY="47.0" prefHeight="923.0" prefWidth="56.0" style="-fx-background-color: #D3D3D3;" />
+                                                        <BorderPane layoutX="54.0" layoutY="47.0" prefHeight="47.0" prefWidth="491.0" style="-fx-background-color: #D3D3D3;" />
+                                                        <TextField fx:id="nameField" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="225.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <effect>
+                                                                <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </TextField>
+                                                        <TextField fx:id="breedField" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="364.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <effect>
+                                                                <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </TextField>
+                                                        <TextField fx:id="shortDesField" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="486.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <effect>
+                                                                <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </TextField>
+                                                        <TextField fx:id="healthStatusField" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="553.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <effect>
+                                                                <InnerShadow height="8.25" radius="4.0625" width="10.0">
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </TextField>
+                                                        <TextField fx:id="shelterdAgeField" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="681.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <effect>
+                                                                <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </TextField>
+                                                        <Label layoutX="143.0" layoutY="225.0" prefHeight="14.0" prefWidth="71.0" text="Name">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="140.0" layoutY="296.0" prefHeight="14.0" prefWidth="71.0" text="Type">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="140.0" layoutY="364.0" prefHeight="14.0" prefWidth="71.0" text="Breed">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="140.0" layoutY="422.0" prefHeight="14.0" prefWidth="71.0" text="Gender">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="139.0" layoutY="486.0" prefHeight="14.0" prefWidth="101.0" text="Short Description">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="139.0" layoutY="553.0" prefHeight="14.0" prefWidth="101.0" text="Health Status">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="139.0" layoutY="681.0" prefHeight="14.0" prefWidth="111.0" text="Sheltered Time Age">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <DatePicker fx:id="stayingSinceField" layoutX="139.0" layoutY="617.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: white;">
+                                                            <effect>
+                                                                <InnerShadow>
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </DatePicker>
+                                                        <Label layoutX="139.0" layoutY="617.0" prefHeight="14.0" prefWidth="101.0" text="Staying Since">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="139.0" layoutY="745.0" prefHeight="14.0" prefWidth="111.0" text="Animal Size">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="139.0" layoutY="810.0" prefHeight="14.0" prefWidth="111.0" text="HouseTrained?">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <BorderPane layoutX="54.0" layoutY="922.0" prefHeight="47.0" prefWidth="491.0" style="-fx-background-color: #D3D3D3;" />
+                                                        <Button fx:id="addButton" layoutX="203.0" layoutY="877.0" mnemonicParsing="false" onAction="#addAction" opacity="0.75" prefHeight="36.0" prefWidth="167.0" style="-fx-background-color: #6ebfe4;" text="Add">
+                                                            <font>
+                                                                <Font name="Constantia" size="18.0" />
+                                                            </font>
+                                                            <cursor>
+                                                                <Cursor fx:constant="HAND" />
+                                                            </cursor>
+                                                        </Button>
+                                                        <RadioButton fx:id="rcat" layoutX="137.0" layoutY="323.0" mnemonicParsing="false" text="Cat">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="t1" />
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="rdog" layoutX="252.0" layoutY="322.0" mnemonicParsing="false" text="Dog" toggleGroup="$t1" />
+                                                        <RadioButton fx:id="rM" layoutX="140.0" layoutY="455.0" mnemonicParsing="false" text="M">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="t2" />
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="rF" layoutX="243.0" layoutY="455.0" mnemonicParsing="false" text="F" toggleGroup="$t2">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="rS" layoutX="140.0" layoutY="780.0" mnemonicParsing="false" text="S">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="t3" />
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="rM1" layoutX="241.0" layoutY="780.0" mnemonicParsing="false" text="M" toggleGroup="$t3">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="rL" layoutX="364.0" layoutY="780.0" mnemonicParsing="false" text="L" toggleGroup="$t3">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="yesButton" layoutX="140.0" layoutY="841.0" mnemonicParsing="false" text="Y">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="t4" />
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="noButton" layoutX="243.0" layoutY="841.0" mnemonicParsing="false" text="N" toggleGroup="$t4">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </RadioButton>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                                <AnchorPane prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: #b1d235;">
+                                    <children>
+                                        <Text fx:id="back" fill="WHITE" layoutY="17.0" onMouseClicked="#backToAnimalPage" strokeType="OUTSIDE" strokeWidth="0.0" text="⬅Back" wrappingWidth="53.015625">
+                                            <font>
+                                                <Font name="Constantia Bold" size="14.0" />
+                                            </font>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </Text>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AdditionalInfoPane" layoutX="204.0" layoutY="-1.0" visible="false">
+                            <children>
+                                <ScrollPane prefHeight="634.0" prefWidth="600.0">
+                                    <content>
+                                        <AnchorPane minHeight="640.0" minWidth="600.0" prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <AnchorPane prefHeight="640.0" prefWidth="600.0" style="-fx-background-color: white;">
+                                                    <children>
+                                                        <Label layoutX="156.0" layoutY="118.0" prefHeight="30.0" prefWidth="286.0" text="GIVE ANIMAL'S INFO" textFill="#b1d235">
+                                                            <font>
+                                                                <Font name="Cooper Black" size="24.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <BorderPane layoutY="47.0" prefHeight="923.0" prefWidth="56.0" style="-fx-background-color: #D3D3D3;" />
+                                                        <BorderPane layoutX="544.0" layoutY="47.0" prefHeight="923.0" prefWidth="56.0" style="-fx-background-color: #D3D3D3;" />
+                                                        <BorderPane layoutX="54.0" layoutY="47.0" prefHeight="47.0" prefWidth="491.0" style="-fx-background-color: #D3D3D3;" />
+                                                        <TextField fx:id="nameField1" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="165.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <effect>
+                                                                <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </TextField>
+                                                        <TextField fx:id="breedField1" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="225.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <effect>
+                                                                <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </TextField>
+                                                        <TextField fx:id="shortDesField1" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="343.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <effect>
+                                                                <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </TextField>
+                                                        <TextField fx:id="shelterdAgeField1" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="402.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <effect>
+                                                                <InnerShadow height="8.25" radius="4.0625" width="10.0">
+                                                                    <color>
+                                                                        <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                                    </color>
+                                                                </InnerShadow>
+                                                            </effect>
+                                                        </TextField>
+                                                        <Label layoutX="140.0" layoutY="165.0" prefHeight="14.0" prefWidth="71.0" text="Name">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="140.0" layoutY="225.0" prefHeight="14.0" prefWidth="71.0" text="Breed">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="140.0" layoutY="284.0" prefHeight="14.0" prefWidth="71.0" text="Gender">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="139.0" layoutY="343.0" prefHeight="14.0" prefWidth="101.0" text="Short Description">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="139.0" layoutY="402.0" prefHeight="14.0" prefWidth="101.0" text="Present Age">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="139.0" layoutY="462.0" prefHeight="14.0" prefWidth="101.0" text="Size">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="139.0" layoutY="523.0" prefHeight="14.0" prefWidth="101.0" text="HouseTrained">
+                                                            <font>
+                                                                <Font name="Constantia" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Button fx:id="addButton1" layoutX="273.0" layoutY="587.0" mnemonicParsing="false" onAction="#addAction1" text="ADD" />
+                                                        <RadioButton fx:id="genMButton" layoutX="139.0" layoutY="314.0" mnemonicParsing="false" text="M">
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="tt1" />
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="genFButton" layoutX="270.0" layoutY="314.0" mnemonicParsing="false" text="F" toggleGroup="$tt1" />
+                                                        <RadioButton fx:id="sizeSButton" layoutX="140.0" layoutY="491.0" mnemonicParsing="false" text="S">
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="tt2" />
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="sizeMButton" layoutX="257.0" layoutY="491.0" mnemonicParsing="false" text="M" toggleGroup="$tt2" />
+                                                        <RadioButton fx:id="sizeLbutton" layoutX="399.0" layoutY="491.0" mnemonicParsing="false" text="L" toggleGroup="$tt2" />
+                                                        <RadioButton fx:id="rY" layoutX="140.0" layoutY="550.0" mnemonicParsing="false" text="Y">
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="tt3" />
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="rN" layoutX="257.0" layoutY="550.0" mnemonicParsing="false" text="N" toggleGroup="$tt3" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                                <AnchorPane prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: #b1d235;">
+                                    <children>
+                                        <Text fx:id="back1" fill="WHITE" layoutY="17.0" onMouseClicked="#backToRequestToDrop" strokeType="OUTSIDE" strokeWidth="0.0" text="⬅Back" wrappingWidth="53.015625">
+                                            <font>
+                                                <Font name="Constantia Bold" size="14.0" />
+                                            </font>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </Text>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane id="card" fx:id="adminAnimalCard" layoutX="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="900.0" visible="false">
+                            <children>
+                                <ScrollPane fx:id="animalCardErScrollPane" prefHeight="614.0" prefWidth="900.0" style="-fx-background-color: black;">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1884.0" prefWidth="900.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <ImageView fx:id="GeneralImage" fitHeight="160.0" fitWidth="187.0" layoutX="372.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Pane layoutX="27.0" layoutY="396.0" prefHeight="257.0" prefWidth="846.0" style="-fx-background-color: #dbf3fa;">
+                                       <children>
+                                          <Pane layoutX="1.0" prefHeight="60.0" prefWidth="241.0">
+                                             <children>
+                                                <Label layoutX="27.0" layoutY="16.0" prefHeight="29.0" prefWidth="65.0" text="Breed:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="breedL" layoutX="105.0" layoutY="16.0" prefHeight="29.0" prefWidth="138.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="60.0" prefHeight="60.0" prefWidth="241.0">
+                                             <children>
+                                                <Label layoutX="27.0" layoutY="16.0" prefHeight="29.0" prefWidth="85.0" text="Gender:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="genderL" layoutX="134.0" layoutY="16.0" prefHeight="29.0" prefWidth="102.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="120.0" prefHeight="60.0" prefWidth="241.0">
+                                             <children>
+                                                <Label layoutX="27.0" layoutY="16.0" prefHeight="29.0" prefWidth="65.0" text="Size:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="sizeL" layoutX="105.0" layoutY="16.0" prefHeight="29.0" prefWidth="131.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="399.0" layoutY="60.0" prefHeight="60.0" prefWidth="441.0">
+                                             <children>
+                                                <Label layoutX="-11.0" layoutY="16.0" prefHeight="29.0" prefWidth="169.0" text="Staying since:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="stayingSinceL" layoutX="172.0" layoutY="10.0" prefHeight="44.0" prefWidth="205.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="407.0" layoutY="120.0" prefHeight="60.0" prefWidth="437.0">
+                                             <children>
+                                                <Label layoutX="-18.0" layoutY="16.0" prefHeight="29.0" prefWidth="213.0" text="Sheltered Time Age:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="shelteredTimeAgeL" layoutX="201.0" layoutY="16.0" prefHeight="29.0" prefWidth="176.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="399.0" layoutY="184.0" prefHeight="60.0" prefWidth="441.0">
+                                             <children>
+                                                <Label layoutX="-12.0" layoutY="16.0" prefHeight="29.0" prefWidth="173.0" text="House-trained:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="houseTrainedL" layoutX="207.0" layoutY="16.0" prefHeight="29.0" prefWidth="170.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" prefHeight="60.0" prefWidth="241.0" visible="false">
+                                             <children>
+                                                <Label layoutX="27.0" layoutY="16.0" prefHeight="29.0" prefWidth="65.0" text="Id:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="idLabel" layoutX="105.0" layoutY="16.0" prefHeight="29.0" prefWidth="138.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="361.0" prefHeight="60.0" prefWidth="241.0">
+                                             <children>
+                                                <Label layoutX="27.0" layoutY="16.0" prefHeight="29.0" prefWidth="65.0" text="Type:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="typelabel" layoutX="105.0" layoutY="16.0" prefHeight="29.0" prefWidth="138.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Label fx:id="nameL" layoutX="364.0" layoutY="274.0" prefHeight="71.0" prefWidth="350.0" text="MOCHA">
+                                       <font>
+                                          <Font name="Arial Black" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="37.0" layoutY="328.0" prefHeight="71.0" prefWidth="350.0" text="About" underline="true">
+                                       <font>
+                                          <Font name="Arial Black" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="37.0" layoutY="672.0" prefHeight="71.0" prefWidth="350.0" text="Health" underline="true">
+                                       <font>
+                                          <Font name="Arial Black" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="27.0" layoutY="744.0" prefHeight="200.0" prefWidth="846.0" style="-fx-background-color: #dbf3fa;">
+                                       <children>
+                                          <Pane layoutX="1.0" prefHeight="60.0" prefWidth="241.0">
+                                             <children>
+                                                <Label layoutX="27.0" layoutY="16.0" prefHeight="29.0" prefWidth="148.0" text="Injury Status:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="injuryL" layoutX="204.0" layoutY="16.0" prefHeight="29.0" prefWidth="631.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="70.0" prefHeight="60.0" prefWidth="241.0">
+                                             <children>
+                                                <Label layoutX="27.0" layoutY="16.0" prefHeight="29.0" prefWidth="103.0" text="Disease:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="diseaseL" layoutX="201.0" layoutY="16.0" prefHeight="29.0" prefWidth="631.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="140.0" prefHeight="60.0" prefWidth="241.0">
+                                             <children>
+                                                <Label layoutX="27.0" layoutY="16.0" prefHeight="29.0" prefWidth="161.0" text="Under Therapy:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="therapyL" layoutX="207.0" layoutY="16.0" prefHeight="29.0" prefWidth="623.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="27.0" layoutY="967.0" prefHeight="71.0" prefWidth="350.0" text="Vaccinations" underline="true">
+                                       <font>
+                                          <Font name="Arial Black" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="17.0" layoutY="1453.0" prefHeight="72.0" prefWidth="406.0" text="Vaccination Update" underline="true">
+                                       <font>
+                                          <Font name="Arial Black" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="14.0" layoutY="1525.0" prefHeight="128.0" prefWidth="851.0" style="-fx-background-color: #dbf3fa;">
+                                       <children>
+                                          <Pane layoutX="1.0" prefHeight="60.0" prefWidth="851.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="331.0" text="Last Vaccinated Date    :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lastVacDateL" layoutX="427.0" layoutY="12.0" prefHeight="37.0" prefWidth="415.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="60.0" prefHeight="60.0" prefWidth="851.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="331.0" text="Next Vaccination Date  :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="nextVacL" layoutX="426.0" layoutY="12.0" prefHeight="37.0" prefWidth="415.0" text="Label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <ImageView fitHeight="150.0" fitWidth="198.0" layoutX="727.0" layoutY="1728.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Images/A1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Pane layoutX="17.0" layoutY="1048.0" prefHeight="371.0" prefWidth="851.0" style="-fx-background-color: #dbf3fa;">
+                                       <children>
+                                          <Pane layoutX="1.0" prefHeight="60.0" prefWidth="386.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="252.0" text="Distemper             :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="distemperL" layoutX="330.0" layoutY="12.0" prefHeight="37.0" prefWidth="48.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="60.0" prefHeight="60.0" prefWidth="386.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="252.0" text="Hepatitis               :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="hepatiisL" layoutX="330.0" layoutY="12.0" prefHeight="37.0" prefWidth="48.0" text="Lbel">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="120.0" prefHeight="60.0" prefWidth="386.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="252.0" text="Leptospirosis        :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="LeptospirosisL" layoutX="330.0" layoutY="12.0" prefHeight="37.0" prefWidth="48.0" text="Lbel">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="176.0" prefHeight="60.0" prefWidth="386.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="252.0" text="Parvo                     :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="parvoL" layoutX="330.0" layoutY="12.0" prefHeight="37.0" prefWidth="48.0" text="Lbel">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="236.0" prefHeight="60.0" prefWidth="386.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="252.0" text="Parainfluenza        :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="ParainfluenzaL" layoutX="330.0" layoutY="12.0" prefHeight="37.0" prefWidth="48.0" text="Lbel">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="1.0" layoutY="296.0" prefHeight="60.0" prefWidth="386.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="252.0" text="Adenovirus_type_1:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="Adenovirus_type_1L" layoutX="330.0" layoutY="12.0" prefHeight="37.0" prefWidth="48.0" text="Lbel">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="408.0" layoutY="60.0" prefHeight="60.0" prefWidth="441.0">
+                                             <children>
+                                                <Label layoutX="64.0" layoutY="12.0" prefHeight="37.0" prefWidth="313.0" text="Bordetella                     :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="BordetellaL" layoutX="385.0" layoutY="12.0" prefHeight="37.0" prefWidth="55.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="408.0" layoutY="296.0" prefHeight="60.0" prefWidth="441.0">
+                                             <children>
+                                                <Label layoutX="64.0" layoutY="11.0" prefHeight="37.0" prefWidth="313.0" text="Feline_Leukemia_Virus:">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="Feline_Leukemia_VirusL" layoutX="385.0" layoutY="12.0" prefHeight="37.0" prefWidth="55.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="408.0" layoutY="120.0" prefHeight="60.0" prefWidth="441.0">
+                                             <children>
+                                                <Label layoutX="64.0" layoutY="12.0" prefHeight="37.0" prefWidth="313.0" text="Rabies                          :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="RabiesL" layoutX="385.0" layoutY="12.0" prefHeight="37.0" prefWidth="55.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="408.0" layoutY="180.0" prefHeight="60.0" prefWidth="441.0">
+                                             <children>
+                                                <Label layoutX="64.0" layoutY="12.0" prefHeight="37.0" prefWidth="313.0" text="Felineherpevirus          :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="FelineherpevirusL" layoutX="385.0" layoutY="12.0" prefHeight="37.0" prefWidth="55.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="408.0" layoutY="236.0" prefHeight="60.0" prefWidth="441.0">
+                                             <children>
+                                                <Label layoutX="64.0" layoutY="12.0" prefHeight="37.0" prefWidth="313.0" text="Calicivirus                    :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="CalicivirusL" layoutX="385.0" layoutY="12.0" prefHeight="37.0" prefWidth="55.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="408.0" layoutY="7.0" prefHeight="60.0" prefWidth="441.0">
+                                             <children>
+                                                <Label layoutX="64.0" layoutY="12.0" prefHeight="37.0" prefWidth="313.0" text="Adenovirus_type_2       :">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="Adenovirus_type_2L" layoutX="385.0" layoutY="12.0" prefHeight="37.0" prefWidth="55.0" text="label">
+                                                   <font>
+                                                      <Font name="Arial Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="60.0" prefWidth="900.0" style="-fx-background-color: #6A0DAD;">
+                                       <children>
+                                          <Label fx:id="backToWhereItcameButton" layoutX="9.0" layoutY="7.0" onMouseClicked="#backToWhereItcamePage" prefHeight="27.0" prefWidth="98.0" text="⬅ Back" textFill="WHITE" underline="true">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                                </ScrollPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="editanimalScrollPane" layoutX="204.0" layoutY="-1.0" prefHeight="634.0" prefWidth="599.0" visible="false">
+                            <children>
+                                <ScrollPane layoutY="48.0" prefHeight="586.0" prefWidth="600.0">
+                                    <content>
+                                        <AnchorPane prefHeight="1046.0" prefWidth="600.0" style="-fx-background-color: white;">
+                                            <children>
+                                                <Label layoutX="169.0" layoutY="48.0" prefHeight="30.0" prefWidth="286.0" text="EDIT ANIMAL'S INFO" textFill="#b1d235">
+                                                    <font>
+                                                        <Font name="Cooper Black" size="24.0" />
+                                                    </font>
+                                                </Label>
+                                                <BorderPane layoutY="35.0" prefHeight="1011.0" prefWidth="39.0" style="-fx-background-color: #D3D3D3;" />
+                                                <BorderPane layoutX="561.0" layoutY="35.0" prefHeight="1011.0" prefWidth="39.0" style="-fx-background-color: #D3D3D3;" />
+                                                <BorderPane layoutX="-1.0" prefHeight="36.0" prefWidth="600.0" style="-fx-background-color: #D3D3D3;" />
+                                                <TextField fx:id="nameField11" alignment="BOTTOM_LEFT" layoutX="136.0" layoutY="304.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <effect>
+                                                        <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                            <color>
+                                                                <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                            </color>
+                                                        </InnerShadow>
+                                                    </effect>
+                                                </TextField>
+                                                <TextField fx:id="breedField11" alignment="BOTTOM_LEFT" layoutX="137.0" layoutY="433.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <effect>
+                                                        <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                            <color>
+                                                                <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                            </color>
+                                                        </InnerShadow>
+                                                    </effect>
+                                                </TextField>
+                                                <TextField fx:id="shortDesField11" alignment="BOTTOM_LEFT" layoutX="141.0" layoutY="552.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <effect>
+                                                        <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                            <color>
+                                                                <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                            </color>
+                                                        </InnerShadow>
+                                                    </effect>
+                                                </TextField>
+                                                <TextField fx:id="healthStatusField11" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="620.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <effect>
+                                                        <InnerShadow height="8.25" radius="4.0625" width="10.0">
+                                                            <color>
+                                                                <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                            </color>
+                                                        </InnerShadow>
+                                                    </effect>
+                                                </TextField>
+                                                <TextField fx:id="shelterdAgeField11" alignment="BOTTOM_LEFT" layoutX="139.0" layoutY="764.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: WHITE;">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <effect>
+                                                        <InnerShadow height="6.5" radius="3.625" width="10.0">
+                                                            <color>
+                                                                <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                            </color>
+                                                        </InnerShadow>
+                                                    </effect>
+                                                </TextField>
+                                                <Label layoutX="140.0" layoutY="304.0" prefHeight="14.0" prefWidth="71.0" text="Name">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="140.0" layoutY="364.0" prefHeight="14.0" prefWidth="71.0" text="Type">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="140.0" layoutY="433.0" prefHeight="14.0" prefWidth="71.0" text="Breed">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="140.0" layoutY="487.0" prefHeight="14.0" prefWidth="71.0" text="Gender">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="144.0" layoutY="552.0" prefHeight="14.0" prefWidth="101.0" text="Short Description">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="144.0" layoutY="620.0" prefHeight="14.0" prefWidth="101.0" text="Health Status">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="139.0" layoutY="764.0" prefHeight="14.0" prefWidth="111.0" text="Sheltered Time Age">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <DatePicker fx:id="stayingSinceField11" layoutX="139.0" layoutY="693.0" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: white;">
+                                                    <effect>
+                                                        <InnerShadow>
+                                                            <color>
+                                                                <Color red="0.4313725531101227" green="0.7490196228027344" blue="0.8941176533699036" />
+                                                            </color>
+                                                        </InnerShadow>
+                                                    </effect>
+                                                </DatePicker>
+                                                <Label layoutX="139.0" layoutY="693.0" prefHeight="14.0" prefWidth="101.0" text="Staying Since">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="139.0" layoutY="829.0" prefHeight="14.0" prefWidth="111.0" text="Animal Size">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="139.0" layoutY="901.0" prefHeight="14.0" prefWidth="111.0" text="HouseTrained?">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <BorderPane layoutX="37.0" layoutY="1009.0" prefHeight="36.0" prefWidth="526.0" style="-fx-background-color: #D3D3D3;" />
+                                                <Button fx:id="editChangesSaveButton" layoutX="212.0" layoutY="960.0" mnemonicParsing="false" onAction="#editChangesSavesAction" opacity="0.75" prefHeight="36.0" prefWidth="167.0" style="-fx-background-color: #6ebfe4;" text="Save changes">
+                                                    <font>
+                                                        <Font name="Constantia" size="18.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                                <RadioButton fx:id="rcat1" layoutX="136.0" layoutY="394.0" mnemonicParsing="false" text="Cat">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="t122" />
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="rdog1" layoutX="263.0" layoutY="393.0" mnemonicParsing="false" text="Dog" toggleGroup="$t122" />
+                                                <RadioButton fx:id="rgenM11" layoutX="140.0" layoutY="515.0" mnemonicParsing="false" text="M">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="t222" />
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="rF11" layoutX="257.0" layoutY="515.0" mnemonicParsing="false" text="F" toggleGroup="$t222">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </RadioButton>
+                                                <RadioButton fx:id="rszS1" layoutX="142.0" layoutY="867.0" mnemonicParsing="false" text="S">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="t322" />
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="rszM11" layoutX="240.0" layoutY="867.0" mnemonicParsing="false" text="M" toggleGroup="$t322">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </RadioButton>
+                                                <RadioButton fx:id="rszL1" layoutX="357.0" layoutY="867.0" mnemonicParsing="false" text="L" toggleGroup="$t322">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </RadioButton>
+                                                <RadioButton fx:id="yesButton1" layoutX="140.0" layoutY="929.0" mnemonicParsing="false" text="Y">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="t422s" />
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="noButton1" layoutX="256.0" layoutY="929.0" mnemonicParsing="false" text="N" toggleGroup="$t422s">
+                                                    <font>
+                                                        <Font name="Constantia" size="12.0" />
+                                                    </font>
+                                                </RadioButton>
+                                                <ImageView fx:id="editErimgView" fitHeight="135.0" fitWidth="159.0" layoutX="212.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Button fx:id="changePicButton2" layoutX="207.0" layoutY="238.0" mnemonicParsing="false" onAction="#changePicAction" opacity="0.75" prefHeight="36.0" prefWidth="167.0" style="-fx-background-color: #6ebfe4;" text="Upload/change picture">
+                                                    <font>
+                                                        <Font name="Constantia" size="14.0" />
+                                                    </font>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </Button>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                                <AnchorPane prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: #b1d235;">
+                                    <children>
+                                        <Text fx:id="back2" fill="WHITE" layoutY="17.0" onMouseClicked="#backToAnimalPage" strokeType="OUTSIDE" strokeWidth="0.0" text="⬅Back" wrappingWidth="53.015625">
+                                            <font>
+                                                <Font name="Constantia Bold" size="14.0" />
+                                            </font>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </Text>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
