@@ -2,7 +2,7 @@
 
 A desktop application built using Java, JavaFX, and Oracle Database to manage an animal shelter. The application provides a user interface for both general users (public) and admins to interact with the system. 
 
-## Features
+## 🚀 Features
 
 ### User Side:
 - **Rescue an Animal**: Users can rescue animals and apply to send them to the shelter for better care.
@@ -15,12 +15,12 @@ A desktop application built using Java, JavaFX, and Oracle Database to manage an
 - **Track Donors**: Admins can view and manage information about donors.
 - **Manage Workers**: Admins can manage the workers of the shelter, including adding, removing, or updating worker details.
 
-## Technologies Used
+## 🛠️ Technologies Used
 - **Java**: The core language used for developing the application.
 - **JavaFX**: For the graphical user interface (GUI).
 - **Oracle Database**: For storing the shelter's data (animals, donations, workers, etc.).
 
-## Installation
+## 💻 Installation
 
 ### Prerequisites
 - **JDK 8 or later**: Ensure you have Java installed on your machine.
