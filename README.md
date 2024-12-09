@@ -32,7 +32,7 @@ A desktop application built using Java, JavaFX, and Oracle Database to manage an
    git clone https://github.com/saeha303/Heartypaws.git
    ```
 **2. Configure the database connection in the application:**
-- Set the correct database URL, username, and password.
+- Set the correct database URL, username, and password.<br>
 **3. Build and run the application:**
 - Open the project in your preferred Java IDE (e.g., IntelliJ IDEA, Eclipse).
 - Run the Main.java file to launch the application.
